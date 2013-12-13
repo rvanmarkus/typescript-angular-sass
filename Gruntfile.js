@@ -31,7 +31,7 @@ module.exports = function(grunt) {
             },
         uglify: {
             options: {
-                banner: '/* <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                banner: '/* <%= pkg.name %>v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
                 mangle: true
             },
             build: {
@@ -86,9 +86,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
     grunt.registerTask('test', ['jshint']);

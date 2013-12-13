@@ -45,6 +45,25 @@ grunt
 
 That's it ! Really easy right ?
 
+Architecture
+------------
+
+The generated files architecture is separated in two.
+
+Inputs
+
+1.  *assets/ts* : Typescript folder (put there your scripts)
+2.  *assets/sass* : Sass folder (put there your styles)
+3.  *assets/imgmin* : Images folder (put there your images)
+
+Outputs
+
+1.  *assets/js* : Generated script (final is called frontend-bootstrap.min.js)
+2.  *assets/css* : Generated css (final is called frontend-bootstrap.min.css)
+3.  *assets/img* : Optimized images goes here
+
+That's it. Make a try.
+
 
 Contact
 -------

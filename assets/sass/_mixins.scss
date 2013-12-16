@@ -1,0 +1,58 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin appearance($param) {
+	-webkit-appearance: $param;
+	-ms-appearance: $param;
+	-o-appearance: $param;
+	appearance: $param;
+}
+
+@mixin font-smoothing($param) {
+	-webkit-font-smoothing: $param;
+	-moz-font-smoothing: $param;
+	-ms-font-smoothing: $param;
+	-o-font-smoothing: $param;
+	font-smoothing: $param;
+}
+
+@mixin text-rendering($param) {
+	-webkit-text-rendering: $param;
+	-moz-text-rendering: $param;
+	-ms-text-rendering: $param;
+	-o-text-rendering: $param;
+	text-rendering: $param;
+}
+
+@mixin box-sizing($param) {
+	-moz-box-sizing: $param;
+	-ms-box-sizing: $param;
+	-o-box-sizing: $param;
+	box-sizing: $param;
+}
+
+@mixin transform($param) {
+	-webkit-transform: $param;
+	-ms-transform: $param;
+	transform: $param;
+}
+
+@mixin transition-duration($param){
+	-webkit-transition-duration: $param;
+	transition-duration: $param;
+}
+
+@mixin transition-property($param){
+	-webkit-transition-property: left;
+	transition-property: left;
+}
+
+@mixin transition($param1, $param2) {
+	-webkit-transition: $param1 $param2;
+	transition: $param1 $param2;
+}

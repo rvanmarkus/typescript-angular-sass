@@ -9,4 +9,4 @@
 /// <reference path='services/TodoStorage.ts' />
 /// <reference path='controllers/TodoCtrl.ts' />
 
-/// <reference path='main.ts' />
+/// <reference path='Main.ts' />

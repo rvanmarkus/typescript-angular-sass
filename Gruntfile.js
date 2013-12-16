@@ -6,11 +6,6 @@ module.exports = function(grunt) {
             build: {
                 src: ['assets/ts/**/*.ts'],
                 out: 'assets/js/main.js'
-            },
-            watch: {
-                src: ['assets/ts/**/*.ts'],
-                out: 'assets/js/main.js',
-                watch: 'assets'
             }
         },
         sass: {                              
@@ -31,13 +26,30 @@ module.exports = function(grunt) {
             },
         uglify: {
             options: {
-                banner: '/* <%= pkg.name %>v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                banner: '/* <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> by @flyersweb */\n',
                 mangle: true
             },
             build: {
                 files: {
-                    'assets/js/<%= pkg.name %>.min.js': ['assets/js/main.js'],
+                    'assets/js/<%= pkg.name %>.min.js': ['assets/js/main.js','assets/js/bootstrap.js'],
                 }
+            },
+            bootstrap: {
+                src: [
+                  'assets/js/bootstrap/transition.js',
+                  'assets/js/bootstrap/alert.js',
+                  'assets/js/bootstrap/button.js',
+                  'assets/js/bootstrap/carousel.js',
+                  'assets/js/bootstrap/collapse.js',
+                  'assets/js/bootstrap/dropdown.js',
+                  'assets/js/bootstrap/modal.js',
+                  'assets/js/bootstrap/tooltip.js',
+                  'assets/js/bootstrap/popover.js',
+                  'assets/js/bootstrap/scrollspy.js',
+                  'assets/js/bootstrap/tab.js',
+                  'assets/js/bootstrap/affix.js'
+                ],
+                dest: 'assets/js/bootstrap.js'
             }
         },
         jshint: {
@@ -60,7 +72,7 @@ module.exports = function(grunt) {
         cssmin: {
             combine: {
                 files: {
-                    'assets/css/<%= pkg.name %>.min.css': ['assets/css/main.css']
+                    'assets/css/<%= pkg.name %>.min.css': ['assets/css/**/*.css']
                 }
             }
         },
@@ -92,5 +104,5 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default', ['ts:build', 'sass', 'uglify', 'cssmin', 'imagemin']);
+    grunt.registerTask('default', ['ts:build', 'sass', 'uglify:bootstrap', 'uglify:build', 'cssmin', 'imagemin']);
 };

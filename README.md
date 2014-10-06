@@ -32,8 +32,10 @@ git clone https://github.com/FlyersWeb/frontend-bootstrap.git
 Next install necessary packages :
 
 ```
-cd frontend-bootstrap
+cd path/to/project
 npm install
+npm install -g grunt-cli
+gem install sass
 ```
 
 After that just run grunt to check source code and to generate final assets :
